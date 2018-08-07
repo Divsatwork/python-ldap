@@ -28,7 +28,6 @@ Usage
 
 .. _pyldap: https://pypi.org/project/pyldap/
 
-
 **Q**: Does it work with Python 2.6? (1.5|2.0|2.1|2.2|2.3|2.4|2.5)?
 
   **A**: No. Old versions of python-ldap are still available from PyPI, though.
@@ -111,6 +110,10 @@ telling Lib/ldap.py and Lib/ldap/schema.py are not found::
     (directories containing various sub-modules).
     The messages above are falsely produced by DistUtils.
     Don't worry about it.
+    
+**Q**: Can't find libraries while installing for Windows?
+
+    **A**: For Python 2.X, there is a Microsoft Visual C++ Compiler For Python available. However, for Python 3.X, VC++ 14.0 is recommended. You will need to install VC++ 14.0 Build Tools. Even after installations, if you still get some errors such as 'io.h Not found' or 'lber.h Not found', I'd suggest you to use ldap3. It's similar to python-ldap.
 
 .. _install-macosx:
 
